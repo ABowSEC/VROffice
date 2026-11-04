@@ -67,7 +67,7 @@ Layout set B is set A mirrored left-to-right, with different file names and fold
 |---|---|---|---|
 | Selection | Click the named file among 15 icons (15 × 15 cm) | Correct icon selected | Selecting a wrong icon (the trial continues) |
 | Drag & Drop | Drag the document into the named folder | Released overlapping the target folder most | Released on a distractor folder or empty space; the document returns to its start position |
-| Arrange & Resize | Move the window by its title bar and resize it from **any corner or edge** (the opposite side stays put) to match the ghost outline, then press **Submit** | Centre offset ≤ 3 cm **and** width/height within 5% | Pressing Submit while outside tolerance |
+| Arrange & Resize | Move the window by its title bar and resize it from **any corner or edge** (the opposite side stays put) to match the ghost outline, then press **Submit** | Centre offset ≤ 5 cm **and** width/height within 10% (loosened from the design doc's 3 cm / 5%) | Pressing Submit while outside tolerance |
 | Document Reading (from the first version) | Read 1–2 documents in the viewer windows, pick the answer in the Answer Panel, then press **Submit** | The submitted answer is correct | Changing an already-selected answer, or Submit with no answer |
 
 A trial that isn't completed within **120 s** is logged with `task_success = false`. Practice trials are never logged.

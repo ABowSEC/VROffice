@@ -17,8 +17,8 @@ export const DOC_SIZE = { w: 0.12, h: 0.15 };
 export const FOLDER_SIZE = { w: 0.2, h: 0.16 };
 
 export const ARRANGE = {
-  posTol: 0.03, // centre offset <= 3 cm
-  sizeTol: 0.05, // width and height within 5 %
+  posTol: 0.05, // centre offset <= 5 cm (design doc: 3 cm; loosened for easier completion)
+  sizeTol: 0.1, // width and height within 10 % (design doc: 5 %)
   minW: 0.2,
   minH: 0.14,
   titleH: 0.045,

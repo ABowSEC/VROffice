@@ -41,7 +41,7 @@ Working notes; not part of the app. Interim deadline: **Fri Nov 6, 2026**.
 - [ ] Both controllers show a ray and a reticle. Hover highlights items, and the trigger selects and drags.
 - [ ] Grip also grabs and drags (secondary).
 - [ ] Icon labels and HUD text are readable at 0.9 m. If not, adjust font sizes in `src/core/windows.js` or move the workspace (`WORKSPACE.z` in `config.js`).
-- [ ] **Is the 3 cm / 5% Arrange tolerance achievable with the ray?** If not, discuss loosening it in `config.js` (`ARRANGE.posTol`, `sizeTol`).
+- [ ] **Arrange tolerance loosened to 5 cm / 10% (Nov 4) for easier completion.** Check on the Quest that it feels right; tune `ARRANGE.posTol` / `sizeTol` in `config.js`. Mention the change from the design doc (3 cm / 5%) in the report.
 - [ ] The Recenter button puts the workspace straight ahead at eye level.
 - [ ] Haptic pulse on button press is noticeable but not annoying.
 - [ ] Complete a full set; **Exit VR** → **Download results CSV** works in the Quest Browser.
@@ -50,7 +50,7 @@ Working notes; not part of the app. Interim deadline: **Fri Nov 6, 2026**.
 
 ## Open questions / decisions for the group
 - Errors now follow the design doc: wrong icon, bad drop, and Submit outside tolerance. Empty-space clicks are no longer counted.
-- Arrange success = **centre** offset ≤ 3 cm (not the corner). Confirm with the group.
+- Arrange success = **centre** offset ≤ 5 cm and size within 10% (not the corner). Confirm with the group.
 - Timeout set at 120 s per trial (`task_success=false`). Not in the doc, but it gives `task_success` a meaning. OK?
 - Is one practice task per condition enough?
 - Is 3 scored tasks per condition enough for analysis, or should we add more per type?

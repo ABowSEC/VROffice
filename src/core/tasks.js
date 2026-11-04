@@ -6,7 +6,7 @@
 // Error triggers (design doc):
 //   selection       selecting a wrong (distractor) file
 //   drag_drop       releasing the document outside the target folder (on a distractor or empty space)
-//   arrange_resize  pressing Submit while outside the tolerance (centre <= 3 cm, size <= 5 %)
+//   arrange_resize  pressing Submit while outside the tolerance (centre <= 5 cm, size <= 10 %; see ARRANGE in config.js)
 //   reading         (first version) changing an already-selected answer, or Submit with no answer.
 //                   task_success = the submitted answer is correct.
 import { buildTrials, alignmentError } from './trials.js';
