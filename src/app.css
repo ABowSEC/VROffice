@@ -32,5 +32,14 @@ canvas { display: block; touch-action: none; user-select: none; }
   text-decoration: none;
   cursor: pointer;
 }
+#overlay button.overlay-toggle {
+  float: right;
+  margin: -2px -4px 4px 8px;
+  padding: 1px 8px;
+  background: rgba(255, 255, 255, 0.15);
+}
+#overlay.min { padding: 4px; }
+#overlay.min > :not(.overlay-toggle) { display: none !important; }
+#overlay.min button.overlay-toggle { float: none; margin: 0; }
 /* Desktop condition: keep the overlay out of the way until the block is done. */
 body.desktop:not(.done) #overlay .when-done { display: none; }

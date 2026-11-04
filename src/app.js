@@ -110,4 +110,22 @@ export function startExperiment(mode) {
   const info = document.getElementById('info');
   if (info) info.textContent = `${pid} · ${CONDITION_LABELS[condition]} · layout set ${setId} · block ${orderIndex}${testMode ? ' · TEST MODE' : ''}`;
   document.getElementById('download')?.addEventListener('click', downloadMine);
+
+  // Minimize toggle: collapses the overlay to a small pill (remembered per device).
+  const overlay = document.getElementById('overlay');
+  if (overlay) {
+    const toggle = document.createElement('button');
+    toggle.className = 'overlay-toggle';
+    overlay.prepend(toggle);
+    const setMin = (min) => {
+      overlay.classList.toggle('min', min);
+      toggle.textContent = min ? (testMode ? 'ⓘ TEST' : 'ⓘ') : '–';
+      toggle.title = min ? 'Show info' : 'Minimize';
+      try { localStorage.setItem('overlayMin', min ? '1' : '0'); } catch {}
+    };
+    let startMin = false;
+    try { startMin = localStorage.getItem('overlayMin') === '1'; } catch {}
+    setMin(startMin);
+    toggle.addEventListener('click', () => setMin(!overlay.classList.contains('min')));
+  }
 }
