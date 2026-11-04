@@ -1,0 +1,17 @@
+# dependencies / build output
+node_modules/
+dist/
+
+# experiment data: never commit participant results or questionnaires
+*.csv
+
+# previous version, kept locally for reference only
+_old/
+
+# editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log

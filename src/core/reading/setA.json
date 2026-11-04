@@ -1,0 +1,147 @@
+{
+  "id": "A",
+  "tasks": [
+    {
+      "id": "practice",
+      "practice": true,
+      "type": "practice",
+      "instructions": "Practice task (not scored). Read the memo, choose the correct answer, then press Submit.",
+      "question": "Which room is the team lunch in?",
+      "documents": [
+        {
+          "id": "memo",
+          "title": "Office Memo",
+          "lines": [
+            "To: All staff",
+            "Re: Friday team lunch",
+            "",
+            "Lunch is on Friday at 12:30.",
+            "Location: Room 210 (2nd floor).",
+            "Please RSVP to Maria by Wednesday."
+          ]
+        }
+      ],
+      "choices": [
+        { "id": "a", "label": "Room 102" },
+        { "id": "b", "label": "Room 210" },
+        { "id": "c", "label": "Room 310" },
+        { "id": "d", "label": "Cafeteria" }
+      ],
+      "correctChoiceId": "b"
+    },
+    {
+      "id": "task_1",
+      "type": "retrieval",
+      "instructions": "Find the requested information in the document.",
+      "question": "What is the final deadline for the Website Redesign project?",
+      "documents": [
+        {
+          "id": "brief",
+          "title": "Project Brief: Website Redesign",
+          "lines": [
+            "Owner: Design Team",
+            "Budget: $18,000",
+            "",
+            "Milestones",
+            "- Kickoff meeting: March 3",
+            "- Wireframes approved: March 21",
+            "- Content freeze: April 9",
+            "- Final deadline: April 25",
+            "",
+            "Notes",
+            "- Status reports due every Monday.",
+            "- Launch review scheduled for May 2."
+          ]
+        }
+      ],
+      "choices": [
+        { "id": "a", "label": "March 21" },
+        { "id": "b", "label": "April 9" },
+        { "id": "c", "label": "April 25" },
+        { "id": "d", "label": "May 2" }
+      ],
+      "correctChoiceId": "c"
+    },
+    {
+      "id": "task_2",
+      "type": "multi_window",
+      "instructions": "Compare the two calendars.",
+      "question": "Which of Alex's meetings overlaps a Conference Room A session that Alex must attend?",
+      "documents": [
+        {
+          "id": "alex",
+          "title": "Alex's Calendar (Tuesday)",
+          "lines": [
+            "09:00-09:30  Email catch-up",
+            "10:00-11:00  Budget Review",
+            "11:30-12:00  1:1 with Sam",
+            "13:00-14:00  Vendor Call",
+            "15:00-15:30  Design Sync",
+            "16:00-17:00  Report Writing"
+          ]
+        },
+        {
+          "id": "room",
+          "title": "Conference Room A (Tuesday)",
+          "lines": [
+            "08:30-09:30  Sales Stand-up",
+            "10:00-11:00  Budget Review (Alex attending)",
+            "12:00-13:00  Lunch & Learn",
+            "13:30-14:30  Client Workshop (Alex attending)",
+            "15:30-16:30  Hiring Panel",
+            "",
+            "Alex must attend every session",
+            "marked 'Alex attending'."
+          ]
+        }
+      ],
+      "choices": [
+        { "id": "a", "label": "Budget Review" },
+        { "id": "b", "label": "1:1 with Sam" },
+        { "id": "c", "label": "Vendor Call" },
+        { "id": "d", "label": "Design Sync" }
+      ],
+      "correctChoiceId": "c"
+    },
+    {
+      "id": "task_3",
+      "type": "comparison",
+      "instructions": "Use both documents to find the one employee who meets ALL requirements.",
+      "question": "Who is available Thursday afternoon, speaks Spanish, AND is Excel certified?",
+      "documents": [
+        {
+          "id": "avail",
+          "title": "Staff Availability (Thursday)",
+          "lines": [
+            "Priya   - Morning only",
+            "Jordan  - Afternoon only",
+            "Elena   - All day",
+            "Marcus  - Afternoon only",
+            "Wei     - Out of office",
+            "Sofia   - Morning only"
+          ]
+        },
+        {
+          "id": "skills",
+          "title": "Staff Skills",
+          "lines": [
+            "Priya   - Spanish, Excel certified",
+            "Jordan  - French, Excel certified",
+            "Elena   - Spanish",
+            "Marcus  - Spanish, Excel certified",
+            "Wei     - Mandarin, Excel certified",
+            "Sofia   - Spanish, Excel certified"
+          ]
+        }
+      ],
+      "choices": [
+        { "id": "a", "label": "Priya" },
+        { "id": "b", "label": "Jordan" },
+        { "id": "c", "label": "Elena" },
+        { "id": "d", "label": "Marcus" },
+        { "id": "e", "label": "Sofia" }
+      ],
+      "correctChoiceId": "d"
+    }
+  ]
+}

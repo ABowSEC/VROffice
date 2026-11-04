@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Virtual Office – Session Launcher</title>
+  </head>
+  <body>
+    <main>
+      <h1>Virtual Office Experiment</h1>
+      <p class="muted">Experimenter launcher. Use anonymous IDs only (P01, P02, ...). Never enter names.</p>
+
+      <section>
+        <h2>1. Participant</h2>
+        <form id="pid-form" class="inline">
+          <label>Participant number <input id="pid-input" placeholder="e.g. 1 or P01" autocomplete="off" required /></label>
+          <label>Starting condition
+            <select id="start-override">
+              <option value="">Auto (counterbalanced)</option>
+              <option value="desktop">2D Desktop first</option>
+              <option value="vr_quest2">VR first</option>
+            </select>
+          </label>
+          <button type="submit">Set</button>
+        </form>
+        <label class="block"><input type="checkbox" id="test-mode" /> Test mode: adds a <b>Skip</b> button to every trial. Skipped trials are not logged. Turn this off for real participants.</label>
+        <div id="order"></div>
+      </section>
+
+      <section>
+        <h2>2. Pre-study questionnaire</h2>
+        <form id="pre-form"></form>
+        <button id="pre-save">Save pre-study answers</button>
+        <span id="pre-status" class="status"></span>
+      </section>
+
+      <section>
+        <h2>3. Post-condition questionnaire</h2>
+        <p class="muted">Fill in once after each condition.</p>
+        <label>Condition just completed
+          <select id="post-condition">
+            <option value="">Select…</option>
+            <option value="desktop">2D Desktop</option>
+            <option value="vr_quest2">VR (Quest 2)</option>
+          </select>
+        </label>
+        <form id="post-form"></form>
+        <label class="block">Comments (optional)<textarea id="post-comments" rows="3"></textarea></label>
+        <button id="post-save">Save post-condition answers</button>
+        <span id="post-status" class="status"></span>
+      </section>
+
+      <section>
+        <h2>4. Data on this device</h2>
+        <p id="data-summary" class="muted"></p>
+        <p class="muted">Data stays in this browser on this device. Export from the PC <em>and</em> from the Quest, then combine the CSV files.</p>
+        <button id="dl-results">Download results CSV</button>
+        <button id="dl-quest">Download questionnaires CSV</button>
+        <button id="clear" class="danger">Clear all data on this device</button>
+      </section>
+    </main>
+    <script type="module" src="/src/launcher.js"></script>
+  </body>
+</html>

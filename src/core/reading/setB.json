@@ -1,0 +1,147 @@
+{
+  "id": "B",
+  "tasks": [
+    {
+      "id": "practice",
+      "practice": true,
+      "type": "practice",
+      "instructions": "Practice task (not scored). Read the notice, choose the correct answer, then press Submit.",
+      "question": "What time does the fire drill start?",
+      "documents": [
+        {
+          "id": "notice",
+          "title": "Building Notice",
+          "lines": [
+            "To: All staff",
+            "Re: Fire drill",
+            "",
+            "A fire drill will take place Thursday.",
+            "Start time: 10:15.",
+            "Meet at the north parking lot."
+          ]
+        }
+      ],
+      "choices": [
+        { "id": "a", "label": "09:45" },
+        { "id": "b", "label": "10:00" },
+        { "id": "c", "label": "10:15" },
+        { "id": "d", "label": "11:15" }
+      ],
+      "correctChoiceId": "c"
+    },
+    {
+      "id": "task_1",
+      "type": "retrieval",
+      "instructions": "Find the requested information in the document.",
+      "question": "What is the final submission date for the Annual Report?",
+      "documents": [
+        {
+          "id": "plan",
+          "title": "Project Plan: Annual Report",
+          "lines": [
+            "Owner: Finance Team",
+            "Budget: $6,500",
+            "",
+            "Milestones",
+            "- Data collection starts: January 8",
+            "- First draft due: February 2",
+            "- Final submission: February 20",
+            "- Board presentation: March 5",
+            "",
+            "Notes",
+            "- Weekly check-ins every Thursday.",
+            "- Printing deadline is February 27."
+          ]
+        }
+      ],
+      "choices": [
+        { "id": "a", "label": "February 2" },
+        { "id": "b", "label": "February 20" },
+        { "id": "c", "label": "February 27" },
+        { "id": "d", "label": "March 5" }
+      ],
+      "correctChoiceId": "b"
+    },
+    {
+      "id": "task_2",
+      "type": "multi_window",
+      "instructions": "Compare the two calendars.",
+      "question": "Which of Taylor's meetings overlaps a Training Room session that Taylor must attend?",
+      "documents": [
+        {
+          "id": "taylor",
+          "title": "Taylor's Calendar (Wednesday)",
+          "lines": [
+            "08:30-09:00  Team Huddle",
+            "09:30-10:30  Quarterly Planning",
+            "11:00-11:30  Expense Approvals",
+            "13:00-13:30  1:1 with Chris",
+            "14:30-15:00  Supplier Meeting",
+            "16:00-16:30  Inbox Review"
+          ]
+        },
+        {
+          "id": "training",
+          "title": "Training Room (Wednesday)",
+          "lines": [
+            "08:00-08:30  IT Orientation",
+            "09:30-10:30  Quarterly Planning (Taylor attending)",
+            "11:30-12:30  Safety Training",
+            "13:15-14:15  Software Demo (Taylor attending)",
+            "15:00-16:00  Onboarding Session",
+            "",
+            "Taylor must attend every session",
+            "marked 'Taylor attending'."
+          ]
+        }
+      ],
+      "choices": [
+        { "id": "a", "label": "Quarterly Planning" },
+        { "id": "b", "label": "Expense Approvals" },
+        { "id": "c", "label": "1:1 with Chris" },
+        { "id": "d", "label": "Supplier Meeting" }
+      ],
+      "correctChoiceId": "c"
+    },
+    {
+      "id": "task_3",
+      "type": "comparison",
+      "instructions": "Use both documents to find the one employee who meets ALL requirements.",
+      "question": "Who is available Monday morning, speaks German, AND has a driver's license?",
+      "documents": [
+        {
+          "id": "avail",
+          "title": "Staff Availability (Monday)",
+          "lines": [
+            "Lucas   - Afternoon only",
+            "Hannah  - Morning only",
+            "Omar    - All day",
+            "Grace   - Morning only",
+            "Ravi    - Out of office",
+            "Nina    - Afternoon only"
+          ]
+        },
+        {
+          "id": "skills",
+          "title": "Staff Skills",
+          "lines": [
+            "Lucas   - German, driver's license",
+            "Hannah  - Italian, driver's license",
+            "Omar    - German",
+            "Grace   - German, driver's license",
+            "Ravi    - German, driver's license",
+            "Nina    - Spanish, driver's license"
+          ]
+        }
+      ],
+      "choices": [
+        { "id": "a", "label": "Lucas" },
+        { "id": "b", "label": "Hannah" },
+        { "id": "c", "label": "Omar" },
+        { "id": "d", "label": "Grace" },
+        { "id": "e", "label": "Ravi" }
+      ],
+      "correctChoiceId": "d"
+    }
+  ]
+}
